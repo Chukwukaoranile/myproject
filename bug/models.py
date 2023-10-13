@@ -3,7 +3,7 @@ from datetime import datetime
 from django.contrib.auth.models import User
 
 # Create your models here
-class bug(models.Model):
+class Bug(models.Model):
     BUG_TYPES = [
         ('error', 'Error'),
         ('feature', 'New Feature'),

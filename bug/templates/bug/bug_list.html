@@ -1,0 +1,14 @@
+{% extends "bug/base.html" %}
+{% block content %}
+
+<h1>List of Bug Fields of the Bug</h1>
+<ul>
+    {% for bug in bugs %}
+    <li> <strong>Description: </strong>{{ bug.description }}</li>
+    <li><strong>Bug Type: </strong>{{ bug.bug_type }}</li>
+    <li><strong>Report Date: </strong> {{ bug.report_date }}</li>
+    <li><strong>Status: </strong> {{ bug.status }}</li><br>
+    {% endfor %}
+</ul>
+
+{% endblock content %}
