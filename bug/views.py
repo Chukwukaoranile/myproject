@@ -6,7 +6,8 @@ from .forms import BugForm
 
 def index(request):
     '''View for the landing page, it returns a simple HttpResponse displaying a message for the landing page.'''
-    return HttpResponse("This is the Landing page")
+    bugs = Bug.objects.all()
+    return render(request, 'bug/index.html', {'bugs': bugs})
 
 
 def register_bug(request):
