@@ -1,14 +1,12 @@
-{% extends "bug/base.html" %}
+{% extends "bug/base.html" %} 
 {% block content %}
 
 <div class="containser p-4 d-grid gap-2 col-6 mx-auto">
-<h1>Register a Bug</h1>
-<form class="was-validated" method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    
-    <button class="btn btn-primary" type="submit">Register</button>
+  <h1>Register a Bug</h1>
+  <form class="was-validated" method="post">
+    {% csrf_token %} {{ form.as_p }}
 
-</form>
+    <button class="btn btn-primary" type="submit">Register</button>
+  </form>
 </div>
 {% endblock content %}

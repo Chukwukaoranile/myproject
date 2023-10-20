@@ -1,11 +1,11 @@
-{% extends "bug/base.html" %}
+{% extends "bug/base.html" %} 
 {% block content %}
 
 <h1>List of Bugs in the Database With links to their Individual Details</h1>
 <ul>
-    {% for bug in bugs %}
-    <li><a href="{% url 'view_bug' bug.id %}">{{ bug.description }}</a></li>
-    {% endfor %}
+  {% for bug in bugs %}
+  <li><a href="{% url 'view_bug' bug.id %}">{{ bug.description }}</a></li>
+  {% endfor %}
 </ul>
 
 {% endblock content %}

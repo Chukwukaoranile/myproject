@@ -1,35 +1,52 @@
 <!DOCTYPE htlm>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta author="Chika Luke Achebe">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	        <title>Bug App</title>
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
- 	
-	</head>
-	<body>
-
-	<nav class="navbar navbar-light rounded  bg-light">
-  <div class="container-fluid">
-	  <a class="navbar-brand" href="{% url 'index' %}">
-      <img src="https://freepngimg.com/thumb/bugs/7-2-bug-png-6.png" alt="" width="30" height="40" class="d-inline-block align-text-center">
-      Bug
-    </a>
-
-  </div>
-  </nav>
-	<div class="container p4">
+  <head>
+    <meta charset="utf-8" />
+    <meta author="Chika Luke Achebe" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bug App</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-light rounded bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'index' %}">
+          <img
+            src="https://freepngimg.com/thumb/bugs/7-2-bug-png-6.png"
+            alt=""
+            width="30"
+            height="40"
+            class="d-inline-block align-text-center"
+          />
+          Bug
+        </a>
+      </div>
+    </nav>
+    <div class="container p4">
 		{% block content %} 
-
 		{% endblock content %}
 	</div>
 
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+		<script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
 
-  	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-	    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-	        
-	</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
