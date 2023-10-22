@@ -47,7 +47,7 @@ _See the requirements.txt file for packages and thier versions_
 
 	python manage.py runserver
 
-**Step 7. Access the project in your web browser at http://localhost:8000.**
+**Step 7. Access the project in your web browser at http://localhost:8000/bug.**
 
 ## Contributing
 
