@@ -1,11 +1,24 @@
 {% extends "bug/base.html" %} 
 {% block content %}
 
-<h1>List of Bugs in the Database With links to their Individual Details</h1>
-<ul>
-  {% for bug in bugs %}
-  <li><a href="{% url 'view_bug' bug.id %}">{{ bug.description }}</a></li>
-  {% endfor %}
-</ul>
+<div class="container mt-5">
+    <h1 class="mb-4">List of Bugs in the Database</h1>
+    <div class="row">
+        <div class="col-md-8">
+            <ul class="list-group">
+                {% for bug in bugs %}
+                <li class="list-group-item">
+                    <span class="badge bg-primary">{{ forloop.counter }}</span>
+                    <a href="{% url 'view_bug' bug.id %}" class="text-decoration-none">
+                        <h5 class="mb-0">{{ bug.description }}</h5>
+                    </a>
+                    <p>Status: <span class="badge {{ bug.status|lower }} {% if bug.status == 'done' %}bg-success{% elif bug.status == 'in_progress' %}bg-warning{% else %}bg-danger{% endif %}">{{ bug.status }}</span></p>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
 
 {% endblock content %}
+
