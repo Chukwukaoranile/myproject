@@ -1,15 +1,32 @@
-{% extends "bug/base.html" %} 
+{% extends "bug/base.html" %}
 {% block content %}
 
-<h1>List of Bug Fields of the Bug</h1>
-<ul>
-  {% for bug in bugs %}
-  <li><strong>Description: </strong>{{ bug.description }}</li>
-  <li><strong>Bug Type: </strong>{{ bug.bug_type }}</li>
-  <li><strong>Report Date: </strong> {{ bug.report_date }}</li>
-  <li><strong>Status: </strong> {{ bug.status }}</li>
-  <br />
-  {% endfor %}
-</ul>
+<div class="container mt-5">
+  <h1>List of Bug Fields</h1>
+  <table class="table table-bordered table-striped mt-4">
+    <thead class="thead-light">
+      <tr>
+	<th>S/No</th>
+        <th>Description</th>
+        <th>Bug Type</th>
+        <th>Report Date</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for bug in bugs %}
+      <tr>
+        <td>{{ forloop.counter }}</td>	
+        <td>{{ bug.description }}</td>
+        <td>{{ bug.bug_type }}</td>
+        <td>{{ bug.report_date }}</td>
+        <td>{{ bug.status }}</td>  
+
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
 
 {% endblock content %}
+
